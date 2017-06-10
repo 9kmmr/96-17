@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://localhost/codenow/';
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -521,3 +521,20 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+$config['aauth']['users'] = 'aauth_users';
+$config['aauth']['no_permission'] = FALSE;
+$config['aauth']['users'] = 'aauth_users';
+$config['aauth']['groups'] = 'aauth_groups';
+$config['aauth']['user_to_group'] = 'aauth_user_to_group';
+$config['aauth']['perms'] = 'aauth_perms';
+$config['aauth']['perm_to_group'] = 'aauth_perm_to_group';
+$config['aauth']['perm_to_user'] = 'aauth_perm_to_user';
+$config['aauth']['system_variables'] = 'aauth_system_variables';
+$config['aauth']['user_variables'] = 'aauth_user_variables';
+$config['aauth']['remember'] = ' +3 days';
+$config['aauth']['max'] = 24;
+$config['aauth']['valid_chars'] = array();
+$config['aauth']['verification'] = false;
+$config['aauth']['login_with_name'] = false;
+$config['aauth']['email'] = 'admin@admin.com';
+$config['aauth']['name'] = 'Emre Akay';
