@@ -6,7 +6,7 @@
 	<link rel="icon" type="image/png" href="<?=base_url()?>assets/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Sign Up </title>
+	<title>Forgot Password</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -44,7 +44,7 @@
                     </button>
 
                     <!-- LOGO -->
-                    <a class="navbar-brand page-scroll" href="#page-top">
+                    <a class="navbar-brand page-scroll" href="<?php echo base_url();?>">
                         <img src="<?=base_url()?>assets/img/logo.png" alt="">
                     </a>
                     <!-- END LOGO -->
@@ -81,8 +81,35 @@
 
     <div id="home-area">
         <div class="overlay">
-            <div class="container log">
+            <div class="container reco">
                 <div class="row special">
+                    <div class="col-md-12 col-sm-12 col-xs-12 text-center wow fadeInLeft animated"> 
+                        <h2>Forgot Password</h2>
+                    
+                        <div class="form-group">
+                            <label></label>
+                            <?php 
+                                foreach ($this->aauth->get_infos_array() as $value) {
+                                    echo $value;
+                                } 
+
+                            ?>
+                        </div>
+                    </div>
+                    <form class="contact-form  wow fadeInLeft animated" method="POST" action="<?php echo base_url();?>recover" id="recover-form" >
+                        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+                            <div class="content">
+                                <div class="form-group">                            
+                                    <input type="text" class="form-control" placeholder=" Your Email..." name="email" required>
+                                </div>
+                                
+                            </div>
+                            <div class="footer text-right">
+                                <input type="submit" name="recover" class="btn btn-simple btn-warning btn-md" value="RESET PASSWORD" id="recover">
+                                        
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -45,7 +45,7 @@
                     </button>
 
                     <!-- LOGO -->
-                    <a class="navbar-brand page-scroll" href="#page-top">
+                    <a class="navbar-brand page-scroll" href="<?php echo base_url();?>">
                         <img src="<?=base_url()?>assets/img/logo.png" alt="">
                     </a>
                     <!-- END LOGO -->
