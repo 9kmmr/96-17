@@ -22,18 +22,19 @@ class Login extends CI_Controller {
     public function index() {
         
         $this->load->view("login");
-    	if (isset($_POST)&& isset($_POST['login'])){
-    		
-    		$login = $this->aauth->login($_POST['email'], $_POST['password']);
+        if (isset($_POST)&& isset($_POST['login'])){
+            
+            $login = $this->aauth->login($_POST['email'], $_POST['password']);
 
-	        if ($login) {
-				redirect('welcome');
-			}
-	        else
-	        {
-	        	$error = $this->aauth->get_errors_array();
-                $this->load->view( 'login', array('error' => $error) );
-	        }      
-    	}
+            if ($login) {
+                redirect('welcome');
+            } else {
+                foreach ($this->aauth->get_errors_array() as $value) {
+                    $this->aauth->info($value, true);
+                }
+                redirect('login', 'location');
+            }  
+
+        }
     }
 }

@@ -63,8 +63,8 @@ class Register extends CI_Controller {
 				if ($response['paymentStatus'] === 'SUCCESS') {
 				    $worldpayOrderCode = $response['orderCode'];
 				    $this->aauth->add_member($user_new, 'Premium_user');
-				    $this->aauth->info('Your account has successfully been created, and you are now logged in.', TRUE);
-				    $this->aauth->keep_infos();
+				    $this->aauth->info('Your account has successfully been created, Confirm your account in your mail and log in ', TRUE);
+				    //$this->aauth->keep_infos();
 				    $this->aauth->send_verification($user_new);
 					redirect('login', 'location'); 
 				} else {
@@ -128,8 +128,8 @@ class Register extends CI_Controller {
 				$user_new = $this->aauth->create_user($_POST['email'], $_POST['password'], $_POST['username']);
 				if ($user_new){
 					$this->aauth->add_member($user_new,'Default_user');
-					$this->aauth->info('Your account has successfully been created, and you are now logged in.', TRUE);
-					$this->aauth->keep_infos();
+					$this->aauth->info('Your account has successfully been created, Confirm your account in your mail and log in', TRUE);
+					//$this->aauth->keep_infos();
 					$this->aauth->send_verification($user_new);
 					redirect('login', 'location'); 
 

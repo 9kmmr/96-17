@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="<?=base_url()?>assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="<?=base_url()?>assets/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Sign In</title>
+	<title>Sign Up </title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -16,8 +16,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
 	<!-- CSS Files -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- <link href="assets/css/material-kit.css" rel="stylesheet"/> -->
+    <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- <link href="<?=base_url()?>assets/css/material-kit.css" rel="stylesheet"/> -->
+	
     <link rel="stylesheet" href="<?=base_url()?>assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?=base_url()?>assets/css/animate.css">
     <link rel="stylesheet" href="<?=base_url()?>assets/css/prettyPhoto.css">
@@ -25,9 +26,10 @@
     <link rel="stylesheet" href="<?=base_url()?>assets/css/main.css">
     <link rel="stylesheet" href="<?=base_url()?>assets/css/responsive.css">
    	<link rel="stylesheet" href="<?=base_url()?>assets/css/style.css">
+
 </head>
 <body class="signup-page">
-		<!-- START-HEADER -->
+	<!-- START-HEADER -->
 	<header>
         <!-- NAVIGATION -->
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -76,60 +78,16 @@
         <!-- END NAVIGATION -->
     </header>
     <!-- END-HEADER -->
-    
-		<div id="home-area">
+
+    <div id="home-area">
         <div class="overlay">
-			<div class="container log">
-				<div class="row special">
-					<div class="col-md-12 col-sm-12 col-xs-12 text-center wow fadeInLeft animated"> 
-                    	<h2>Login</h2>
-                    </div>
-                    <div class="form-group">
-                    	<label></label>
-                    </div>
-					<form class="contact-form  wow fadeInLeft animated" method="POST" action="<?php echo base_url();?>login" id="login-form" >
-						<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-
-							<div>
-								<?php 
-												foreach ($this->aauth->get_infos_array() as $value) {
-													echo $value;
-											 	} 
-											?>
-							</div>
-							
-							<div class="content">
-
-								<div class="form-group">
-									
-									<input type="email" class="form-control" placeholder="Your Email..." name="email" required>
-								</div>
-
-								<div class="form-group">
-									
-									<input type="password" placeholder="Password..." autocomplete="off" class="form-control" name="password" required />
-								</div>
-
-							</div>
-							<div id="login-phase">
-								<span class="footer text-left">
-									<a href="recover">Forgot my password ?</a>
-								</span>
-								<div class="footer text-right">
-									<input type="submit" name="login" class="btn btn-simple btn-primary btn-lg" value="LOGIN" id="login">
-									
-								</div>
-							</div>	
-							
-						</div>
-					</form>
-				</div>
-			</div>
-
-		</div>
-
+            <div class="container log">
+                <div class="row special">
+                </div>
+            </div>
+        </div>
     </div>
-     <!-- FOOTER -->
+
     <footer>
         <div class="container">
             <div class="row">
@@ -169,20 +127,15 @@
     </footer>
     <!-- END FOOTER -->
 
+
 </body>
-	<!--   Core JS Files   -->
-	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="assets/js/material.min.js"></script>
+    <!--   Core JS Files   -->
+    <script src="<?=base_url()?>assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="<?=base_url()?>assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="<?=base_url()?>assets/js/material.min.js"></script>
 
-	<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-	<script src="assets/js/nouislider.min.js" type="text/javascript"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="<?=base_url()?>assets/js/nouislider.min.js" type="text/javascript"></script>
 
-	<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
-	<script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
-
-	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
-	<script src="assets/js/material-kit.js" type="text/javascript"></script>
-	
-	
-</html>
+    <!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+    <script src="<?=base_url()?>assets/js/bootstrap-datepicker.js" type="text/javascript"></script>

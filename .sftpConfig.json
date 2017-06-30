@@ -10,7 +10,7 @@
     "passive": false,
     "interactiveAuth": false,
     "remotePath": "/demo/",
-    "uploadOnSave": true,
+    "uploadOnSave": false,
     "syncMode": "update",
     "watcher": {
         "files": false,
