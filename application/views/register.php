@@ -19,10 +19,67 @@
 	<!-- CSS Files -->
     <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="<?=base_url()?>assets/css/material-kit.css" rel="stylesheet"/>
+	
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/prettyPhoto.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/main.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/responsive.css">
 
 </head>
 <body class="signup-page">
+	<header>
+        <!-- NAVIGATION -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
+                    <!-- LOGO -->
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <img src="<?=base_url()?>assets/img/logo.png" alt="">
+                    </a>
+                    <!-- END LOGO -->
+
+                </div>
+
+                <!-- TOGGLE NAV -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li><a class="page-scroll" href="#top">Home</a>
+                        </li>
+                        <li><a class="page-scroll" href="search">Search</a>
+                        </li>
+                        <?php if ( $check_login ) { ?>
+                            <li><a class="page-scroll" href="<?php echo base_url();?>logout">Logout</a>
+                            </li>
+                        <?php } else { ?>
+                            <li><a class="page-scroll" href="<?php echo base_url();?>login">Login</a>
+                            </li>
+                            <li><a class="page-scroll" href="<?php echo base_url();?>register">Register</a>
+                            </li>
+                        <?php } ?>
+                        <li><a class="page-scroll" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- TOGGLE NAV -->
+
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- END NAVIGATION -->
+    </header>
     <div class="wrapper">
 		<div class="header header-filter" style="background-image: url('<?=base_url()?>assets/img/bg.jpg'); background-size: cover; background-position: top center;">
 			<div class="container">
