@@ -7,7 +7,7 @@
 	<link rel="icon" type="image/png" href="<?=base_url()?>assets/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Sign Up Page - Material Kit by Creative Tim</title>
+	<title>Sign Up </title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -71,9 +71,11 @@
 											
 										</span>
 										<select class="form-control" name="type"  placeholder="chose your type" id="type_chose">
-											<option value="normal" selected>Chose your type</option>
-											<option value="normal">Normal</option>
-											<option value="premium">Premium($10)</option>
+
+											<option value="normal" <?php if ($plan=="") echo 'selected'?>>Chose your type</option>
+											<option value="basic" <?php if ($plan=="basic") echo 'selected'?>>Basic</option>
+											<option value="pro" <?php if ($plan=="pro") echo 'selected'?>>Pro($49)</option>
+											<option value="premium" <?php if ($plan=="premium") echo 'selected'?>>Premium($99)</option>
 										</select>
 									</div>
 									<div style="display: none;" id="premium_pay">
@@ -220,14 +222,14 @@
 			document.getElementById("expiration-month").removeAttribute("required");
 		}
 		var type_acount = document.getElementById('type_chose').value;
-		if (document.getElementById('type_chose').value=='premium'){
+		if (document.getElementById('type_chose').value=='premium'||document.getElementById('type_chose').value=='pro'){
 			show_premium();
 		}
 		else {
 			hide_premium();
 		}
 		document.getElementById('type_chose').onchange = function(){			
-			if (document.getElementById("type_chose").value =='premium'){
+			if (document.getElementById("type_chose").value =='premium'||document.getElementById("type_chose").value =='pro'){
 				show_premium();
 			}
 			else {

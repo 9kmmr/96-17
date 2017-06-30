@@ -128,12 +128,12 @@ $config_aauth["default"] = array(
 
  'login_with_name'                => false,
 
- 'email'                          => 'admin@admin.com',
- 'name'                           => 'Emre Akay',
- 'email_config'                   => false,
+ 'email'                          => 'aushet6@gmail.com',
+ 'name'                           => 'Admin Lam',
+ 'email_config'                   => true,
 
- 'verification'                   => false,
- 'verification_link'              => '/account/verification/',
+ 'verification'                   => true,
+ 'verification_link'              => '/verify/',
  'reset_password_link'            => '/account/reset_password/',
 
  'hash'                           => 'sha256',

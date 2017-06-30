@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL); 
+
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
@@ -20,6 +20,7 @@ class Login extends CI_Controller {
     }
 
     public function index() {
+        
         $this->load->view("login");
     	if (isset($_POST)&& isset($_POST['login'])){
     		

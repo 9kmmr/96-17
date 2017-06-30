@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>AppPonsive | Portfolio Landing Page</title>
+    <title>Daily Law Times</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -63,7 +63,7 @@
                         </li>
                         <li><a class="page-scroll" href="#top">Home</a>
                         </li>
-                        <li><a class="page-scroll" href="#services">Services</a>
+                        <li><a class="page-scroll" href="search">Search</a>
                         </li>
                         <?php if ( $check_login ) { ?>
                             <li><a class="page-scroll" href="<?php echo base_url();?>logout">Logout</a>
@@ -96,8 +96,8 @@
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="home-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
                             <h1>Welcome</h1>
-                            <p>We are the <strong>biggest law database</strong>. We find the problems, Create Solutions. Design & Development is our Passion.</p>
-                            <a class="button home" href="#">Get Started</a>
+                            <p>We are the <strong>biggest law database</strong> with a Strong and Fast full-text search tools.</p>
+                            <a class="button home" href="search">Start Searching</a>
                         </div>
                     </div>
                     <!-- END HOME CONTENT -->
@@ -105,29 +105,46 @@
                     <!-- HOME FEATURE IMAGE -->
                     <div class="col-md-6 col-sm-6 col-xs-12"> 
                         <div class="home-feature center-block wow bounceIn user-type" data-wow-duration="1s" data-wow-delay="1s">
-                            <div id="pricing-table" class="clear">
-                                <div class="plan">
-                                    <h3>Free<span>$0</span></h3>
-                                    <a class="signup" href="">Sign up</a>
-                                    <ul>
-                                        <li><b>10GB</b> Disk Space</li>
-                                        <li><b>100GB</b> Monthly Bandwidth</li>
-                                        <li><b>20</b> Email Accounts</li>
-                                        <li><b>Unlimited</b> subdomains</li>
-                                    </ul>
+                            <form method="POST" action="<?php echo base_url(); ?>register">
+                                <div class="plans">
+
+                                    <div class="plan">
+                                        <h3 class="plan-title">Basic User</h3>
+                                        <p class="plan-price">$0 <span class="plan-unit">per month</span></p>
+                                        <ul class="plan-features">
+                                            <li class="plan-feature">1000 <span class="plan-feature-name">requests</span></li>
+                                            <li class="plan-feature">100 <span class="plan-feature-name">documents download</span></li>
+                                            <li class="plan-feature">30 <span class="plan-feature-name">requests / day</span></li>
+                                        </ul>
+                                        <button name="basic" value="basic" class="plan-button">Choose Plan</button>
+                                    </div>
+
+                                    <div class="plan plan-highlight">
+                                        <p class="plan-recommended">Recommended</p>
+                                        <h3 class="plan-title">Pro User</h3>
+                                        <p class="plan-price">$49 <span class="plan-unit">per month</span></p>
+                                        <ul class="plan-features">
+                                            <li class="plan-feature">50000 <span class="plan-feature-name">requests</span></li>
+                                            <li class="plan-feature">2000 <span class="plan-feature-name">documents download</span></li>
+                                            <li class="plan-feature">1000 <span class="plan-feature-name">requests / day</span></li>
+                                        </ul>
+                                        <button name="pro" value="pro" class="plan-button">Choose Plan</button>
+                                    </div>
+
+                                    <div class="plan">
+                                        <h3 class="plan-title">Premium User</h3>
+                                        <p class="plan-price">$99 <span class="plan-unit">per month</span></p>
+                                        <ul class="plan-features">
+                                            <li class="plan-feature">unlimited <span class="plan-feature-name">requests</span></li>
+                                            <li class="plan-feature">unlimited <span class="plan-feature-name">documents </span></li>
+                                            <li class="plan-feature">unlimited <span class="plan-feature-name">requests / day</span></li>
+                                        </ul>
+                                        <button name="premium" value="premium" class="plan-button">Choose Plan</button>
+                                    </div>
+                                
                                 </div>
-                                <div class="plan">
-                                    <h3>Premium<span>$100</span></h3>
-                                    <a class="signup" href="">Sign up</a>
-                                    <ul>
-                                        <li><b>10GB</b> Disk Space</li>
-                                        <li><b>100GB</b> Monthly Bandwidth</li>
-                                        <li><b>20</b> Email Accounts</li>
-                                        <li><b>Unlimited</b> subdomains</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- <img class="img-responsive" src="assets/img/app.png" alt=""> -->
+                            </form>
+
                         </div>
                     </div>
                     <!-- END HOME FEATURE IMAGE -->
@@ -141,51 +158,10 @@
     <!-- SERVICES -->
     <section id="services" class="section text-center">
         <div class="container">
-            <h2 class="section-title wow fadeIn">Services</h2>
+            <h2 class="section-title wow fadeIn">Our Database</h2>
             <div class="row">
 
-                <!-- SINGLE SERVICE -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-service text-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0s">
-                        <div class="service-content text-left">
-                            <i class="fa fa-desktop fa-3x"></i>
-                            <h3>Web Design</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odit amet repellendus, eum ipsum laboriosam.</p>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- END SINGLE SERVICE -->
-
-                <!-- SINGLE SERVICE -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-service text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="service-title">
-                            <i class="fa fa-mobile-phone fa-3x"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3>Mobile Design</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odit amet repellendus, eum ipsum laboriosam.</p>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- END SINGLE SERVICE -->
-
-                <!-- SINGLE SERVICE -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-service text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".6s">
-                        <div class="service-title">
-                            <i class="fa fa-code fa-3x"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3>Code</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odit amet repellendus, eum ipsum laboriosam.</p>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- END SINGLE SERVICE -->
+                
 
                 <!-- SINGLE SERVICE -->
                 <div class="col-md-4 col-sm-6">
@@ -194,7 +170,7 @@
                             <i class="fa fa-shopping-cart fa-3x"></i>
                         </div>
                         <div class="service-content">
-                            <h3>Ecommerce</h3>
+                            <h3>The biggest Law Database in Indian</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odit amet repellendus, eum ipsum laboriosam.</p>
                             <a href="#">Learn More</a>
                         </div>
@@ -209,7 +185,7 @@
                             <i class="fa fa-cog fa-3x"></i>
                         </div>
                         <div class="service-content">
-                            <h3>CMS</h3>
+                            <h3>3 TB data of all subject</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odit amet repellendus, eum ipsum laboriosam.</p>
                             <a href="#">Learn More</a>
                         </div>
@@ -224,7 +200,7 @@
                             <i class="fa fa-rocket fa-3x"></i>
                         </div>
                         <div class="service-content">
-                            <h3>Web Application</h3>
+                            <h3>1 Billion record</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odit amet repellendus, eum ipsum laboriosam.</p>
                             <a href="#">Learn More</a>
                         </div>
@@ -239,91 +215,7 @@
     </section>
     <!-- END SERVICES -->
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="section text-center">
-        <div class="container">
-            <h2 class="section-title wow fadeIn">Portfolio</h2>
-            <div class="portfolio-filter text-center wow fadeInLeft" data-wow-duration="1s">
-                <a href="#">Mobile</a>
-                <a href="#">Web Design</a>
-                <a href="#">Branding</a>
-                <a href="#">Photography</a>
-            </div>
-            <div class="row">
-                <div class="portfolio-gallery wow pulse">
-
-                    <!-- SINGLE PORTFOLIO -->
-                    <div class="single-portfolio">
-                        <a href="assets/img/portfolio/01.png" class="prettyPhoto" title="Single Portfolio">
-                            <img src="assets/img/portfolio/01.png" alt="" class="img-responsive center-block">
-                        </a>
-                    </div>
-                    <!-- END SINGLE PORTFOLIO -->
-
-                    <!-- SINGLE PORTFOLIO -->
-                    <div class="single-portfolio">
-                        <a href="assets/img/portfolio/02.png" class="prettyPhoto" title="Single Portfolio">
-                            <img src="assets/img/portfolio/02.png" alt="" class="img-responsive center-block">
-                        </a>
-                    </div>
-                    <!-- END SINGLE PORTFOLIO -->
-
-                    <!-- SINGLE PORTFOLIO -->
-                    <div class="single-portfolio">
-                        <a href="assets/img/portfolio/03.png" class="prettyPhoto" title="Single Portfolio">
-                            <img src="assets/img/portfolio/03.png" alt="" class="img-responsive center-block">
-                        </a>
-                    </div>
-                    <!-- END SINGLE PORTFOLIO -->
-
-                    <!-- SINGLE PORTFOLIO -->
-                    <div class="single-portfolio">
-                        <a href="assets/img/portfolio/04.png" class="prettyPhoto" title="Single Portfolio">
-                            <img src="assets/img/portfolio/04.png" alt="" class="img-responsive center-block">
-                        </a>
-                    </div>
-                    <!-- END SINGLE PORTFOLIO -->
-
-                    <!-- SINGLE PORTFOLIO -->
-                    <div class="single-portfolio">
-                        <a href="assets/img/portfolio/05.png" class="prettyPhoto" title="Single Portfolio">
-                            <img src="assets/img/portfolio/05.png" alt="" class="img-responsive center-block">
-                        </a>
-                    </div>
-                    <!-- END SINGLE PORTFOLIO -->
-
-                    <!-- SINGLE PORTFOLIO -->
-                    <div class="single-portfolio">
-                        <a href="assets/img/portfolio/06.png" class="prettyPhoto" title="Single Portfolio">
-                            <img src="assets/img/portfolio/06.png" alt="" class="img-responsive center-block">
-                        </a>
-                    </div>
-                    <!-- END SINGLE PORTFOLIO -->
-
-                    <!-- SINGLE PORTFOLIO -->
-                    <div class="single-portfolio">
-                        <a href="assets/img/portfolio/07.png" class="prettyPhoto" title="Single Portfolio">
-                            <img src="assets/img/portfolio/07.png" alt="" class="img-responsive center-block">
-                        </a>
-                    </div>
-                    <!-- END SINGLE PORTFOLIO -->
-
-                    <!-- SINGLE PORTFOLIO -->
-                    <div class="single-portfolio">
-                        <a href="assets/img/portfolio/08.png" class="prettyPhoto" title="Single Portfolio">
-                            <img src="assets/img/portfolio/08.png" alt="" class="img-responsive center-block">
-                        </a>
-                    </div>
-                    <!-- END SINGLE PORTFOLIO -->
-
-
-                </div>
-                <!--./portfolio-gallery-->
-            </div>
-        </div>
-        <!--/.container-->
-    </section>
-    <!-- END PORTFOLIO -->
+    
 
     <!-- NEWSLETTER -->
     <section id="newsletter" class="section text-center">
@@ -454,16 +346,12 @@
                 <div class="col-md-3">
                     <div class="contact-info text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                         <h3>Get In Touch</h3>
-                        <p><span><i class="fa fa-map-marker"></i></span> Little Lonsdale St, Talay</p>
-                        <p><span><i class="fa fa-phone"></i></span> +123 456 789</p>
-                        <p><span><i class="fa fa-envelope-o"></i></span> info@email.com</p>
+                        <p><span><i class="fa fa-map-marker"></i></span> Daily Law Times Private Limited</p>
+                        <p><span><i class="fa fa-map-marker"></i></span> 1, Sardarpura, UDAIPUR - 313001 RAJASTHAN - INDIA</p>
+                        <p><span><i class="fa fa-phone"></i></span> +91 294 2425004</p>
+                        <p><span><i class="fa fa-envelope-o"></i></span> dailylawtimes@gmail.com</p>
                     </div>
-                    <div class="business-hours text-left wow fadeInRight" data-wow-duration="1s" data-wow-delay=".6s">
-                        <h3>Business Hours</h3>
-                        <p>Monday - Friday: 9 am to 20 pm</p>
-                        <p>Saturday: 9 am to 17 pm</p>
-                        <p>Sunday: day off</p>
-                    </div>
+                    
                 </div>
                 <!-- END CONTACT INFO -->
 

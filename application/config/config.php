@@ -23,7 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/codenow/';
+date_default_timezone_set("Asia/Bangkok");
+$config['base_url'] = 'http://dailylawtimes.com/demo/';
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,7 @@ $config['base_url'] = 'http://localhost/codenow/';
 |
 */
 $config['index_page'] = '';
+
 
 /*
 |--------------------------------------------------------------------------
@@ -345,7 +347,7 @@ $config['encryption_key'] = '';
 |	Setting to 0 (zero) means expire when the browser is closed.
 |
 | 'sess_save_path'
-|
+
 |	The location to save sessions to, driver dependent.
 |
 |	For the 'files' driver, it's a path to a writable directory.
@@ -380,7 +382,7 @@ $config['encryption_key'] = '';
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
-$config['sess_save_path'] = NULL;
+$config['sess_save_path'] = sys_get_temp_dir();
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;
@@ -534,7 +536,7 @@ $config['aauth']['user_variables'] = 'aauth_user_variables';
 $config['aauth']['remember'] = ' +3 days';
 $config['aauth']['max'] = 24;
 $config['aauth']['valid_chars'] = array();
-$config['aauth']['verification'] = false;
+$config['aauth']['verification'] = true;
 $config['aauth']['login_with_name'] = false;
-$config['aauth']['email'] = 'admin@admin.com';
-$config['aauth']['name'] = 'Emre Akay';
+$config['aauth']['email'] = 'aushet6@gmail.com';
+$config['aauth']['name'] = 'Admin Lam';
